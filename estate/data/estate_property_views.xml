@@ -1,18 +1,34 @@
 <?xml version="1.0"?>
 <odoo>
 <!-- Configuration/Lead & Opportunities/Lost Reasons Menu -->
-
-    <record id="crm_lost_reason_view_form" model="ir.ui.view">
+    
+    <!--vista de formulario-->
+    
+    <record id="test_view_form" model="ir.ui.view">
         <field name="name">vista lista test model</field>
         <field name="model">test.model</field>
         <field name="arch" type="xml">
-            <form string="lista test model" editable="bottom">
-                <field name="name"/>
+            <form string="lista test model">
+                <sheet>
+                    <group>
+                        <group>
+                            <span class="o_stat_text">info</span>
+                            <field name="name" class="o_stat_value"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
             </form>
         </field>
     </record>
 
-    <record id="crm_lost_reason_view_tree" model="ir.ui.view">
+    <!--vista de lista-->
+    
+    <record id="test_view_tree" model="ir.ui.view">
         <field name="name">vista lista test model</field>
         <field name="model">test.model</field>
         <field name="arch" type="xml">
@@ -35,6 +51,9 @@
             </tree>
         </field>
     </record>
+
+    
+    
     
     <record id="test_model_action" model="ir.actions.act_window">
         <field name="name">Test action</field>
@@ -43,9 +62,10 @@
     </record>
 
     
-
+    <!--menu-->
     <menuitem id="test_menu_root" name="Test">
         <menuitem id="test_first_level_menu" name="First Level">
+            <menuitem id="test_model_menu_action" action="test_model_action"/>
             <menuitem id="test_model_menu_action" action="test_model_action"/>
         </menuitem>
     </menuitem>
