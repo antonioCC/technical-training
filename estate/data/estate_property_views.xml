@@ -16,7 +16,7 @@
         <field name="name">vista lista test model</field>
         <field name="model">test.model</field>
         <field name="arch" type="xml">
-            <tree string="lista test model" editable="bottom">
+            <tree string="lista test model">
                 <field name="name"/>
                 <field name="description"/>
                 <field name="postcode"/>
