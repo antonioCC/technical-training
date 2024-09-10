@@ -18,6 +18,20 @@
         <field name="arch" type="xml">
             <tree string="lista test model" editable="bottom">
                 <field name="name"/>
+                <field name="description"/>
+                <field name="postcode"/>
+                <field name="date_availability"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="facades"/>
+                <field name="garage"/>
+                <field name="garden"/>
+                <field name="garden_area"/>
+                <field name="garden_orientation"/>
+                <field name="active"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>
@@ -28,5 +42,11 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="test_model_menu_action" action="test_model_action"/>
+    
+
+    <menuitem id="test_menu_root" name="Test">
+        <menuitem id="test_first_level_menu" name="First Level">
+            <menuitem id="test_model_menu_action" action="test_model_action"/>
+        </menuitem>
+    </menuitem>
 </odoo>
